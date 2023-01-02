@@ -1,4 +1,6 @@
 call plug#begin()
+
+
 " Plugins aqui
 Plug 'sainnhe/sonokai'
 Plug 'vim-airline/vim-airline'
@@ -12,6 +14,7 @@ Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'davidhalter/jedi-vim'
+Plug 'terryma/vim-multple-cursors'
 
 if (has("nvim"))
     Plug 'nvim-lua/plenary.nvim'
@@ -44,6 +47,7 @@ set splitright       " Create the vertical splits to the right
 set splitbelow       " Create the horizontal splits below
 set autoread         " Update vim after file update from outside
 set mouse=a          " Enable mouse support
+set inccommand=split  " Visualização em tempo real do retorno do command
 filetype on          " Detect and set the filetype option and trigger the FileType Event
 filetype plugin on   " Load the plugin file for the file type, if any
 filetype indent on   " Load the indent file for the file type, if any
@@ -112,7 +116,7 @@ nmap th :split<CR>
 nmap tv :vsplit<CR>
 
 " Close splits and others
-nmap tt :q<CR>
+"nmap tt :q<CR>
 
 
 " Call command shortcut
@@ -129,7 +133,13 @@ cab Q  q
 "Salvar arquivos com CTRL + S
 nnoremap <C-s> :w!<CR>
 
+"Definição de tecla padrao de acionamento
+let mapleader="\<space>"
 
+"Editar o diretório do arquivo init.vim
+nnoremap <leader>; A;<esc>
+nnoremap <leader>ev :vsplit ~/.config/nvim/init.vim<cr>
+nnoremap <leader>sv :source ~/.config/nvim/init.vim<cr>
 "Copiar um texto e enviar esse texto para a área de transferência
 vnoremap <C-c> "+y<CR>
 
