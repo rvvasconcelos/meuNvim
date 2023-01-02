@@ -14,7 +14,7 @@ Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'davidhalter/jedi-vim'
-Plug 'terryma/vim-multple-cursors'
+"Plug 'terryma/vim-multple-cursors'
 
 if (has("nvim"))
     Plug 'nvim-lua/plenary.nvim'
