@@ -14,12 +14,12 @@ Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'davidhalter/jedi-vim'
-"Plug 'terryma/vim-multple-cursors'
-
+Plug 'terryma/vim-multiple-cursors'
 if (has("nvim"))
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
 endif
+Plug 'folke/which-key.nvim'
 call plug#end()
 
 " Global Sets """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -47,7 +47,7 @@ set splitright       " Create the vertical splits to the right
 set splitbelow       " Create the horizontal splits below
 set autoread         " Update vim after file update from outside
 set mouse=a          " Enable mouse support
-set inccommand=split  " Visualização em tempo real do retorno do command
+set inccommand=split  " Visualização em tempo real do retorno do command %s///g
 filetype on          " Detect and set the filetype option and trigger the FileType Event
 filetype plugin on   " Load the plugin file for the file type, if any
 filetype indent on   " Load the indent file for the file type, if any
@@ -116,7 +116,7 @@ nmap th :split<CR>
 nmap tv :vsplit<CR>
 
 " Close splits and others
-"nmap tt :q<CR>
+nmap tt :q<CR>
 
 
 " Call command shortcut
