@@ -17,7 +17,6 @@ luafile ~/.config/nvim/lua/lsp/python-lsp.lua
 luafile ~/.config/nvim/lua/lsp/tsserver-lsp.lua
 luafile ~/.config/nvim/lua/lsp/yaml-lsp.lua
 
-
 " AIRLINE CUSTOMIZATION
 execute pathogen#infect()
 " air-line
