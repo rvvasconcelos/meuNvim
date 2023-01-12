@@ -48,7 +48,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " lsp
     Plug 'neovim/nvim-lspconfig'
     Plug 'hrsh7th/nvim-compe'
-    Plug 'williamboman/nvim-lsp-installer'
+    "lug 'williamboman/nvim-lsp-installer'
 
     "Airline vim
     Plug 'vim-airline/vim-airline'
@@ -82,6 +82,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'hrsh7th/vim-vsnip-integ'
 
     Plug 'folke/which-key.nvim'
+
+    "Plug 'zxqfl/tabnine-vim'
 
 
 call plug#end()

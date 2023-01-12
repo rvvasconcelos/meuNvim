@@ -4,11 +4,15 @@ let mapleader="\<space>"
 nmap <Leader><space> :Which-key<CR> 
 
 
-" Use alt + hjkl to resize windows
-nnoremap <M-j>    :resize -2<CR>
-nnoremap <M-k>    :resize +2<CR>
+" Use alt + hjkl to resize windows | Resize window using <shift> arrow keys
+nnoremap <M-k>    :resize -2<CR>
+nnoremap <S-Up>   :resize -2<CR>
+nnoremap <M-j>    :resize +2<CR>
+nnoremap <S-Down> :resize +2<CR>
 nnoremap <M-h>    :vertical resize -2<CR>
+nnoremap <S-Right>:vertical resize -2<CR>
 nnoremap <M-l>    :vertical resize +2<CR>
+nnoremap <S-Left> :vertical resize +2<CR> 
 
 " EASY CAPS - Shift + u = upper case, u = lower case
 inoremap <c-u> <ESC>viwUi
@@ -43,7 +47,12 @@ nnoremap <C-l> <C-w>l
 
 " Open nerdTree with keyshortcut
 let mapleader = " "
-nmap <leader>ne :NERDTree<cr>
+nmap <leader>e :NERDTree<cr>
+nmap <Leader>rr :NERDTreeFocus<cr>R<c-w><c-p>
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+"nnoremap <C-f> :NERDTreeFind<CR>
 
 " TABS
 noremap <Tab> :tabnext<CR>
@@ -107,6 +116,9 @@ let mapleader="\<space>"
 nnoremap <leader>; A;<esc>
 nnoremap <leader>ev :vsplit ~/.config/nvim/init.vim<cr>
 nnoremap <leader>sv :source ~/.config/nvim/init.vim<cr>
+nnoremap <leader>cf :vsplit ~/.config/nvim/settings.vim<cr>
+nnoremap <leader>cr :source ~/.config/nvim/settings.vim<cr>
+
 
 "Debugging keys
 nnoremap <Leader>dd :call vimspector#Launch()<CR>
@@ -125,5 +137,4 @@ nmap <Leader>dj <Plug>VimspectorStepOver
 inoremap <silent><expr> <C-Space> compe#complete()
 inoremap <silent><expr> <C-e>     compe#close('<C-e>')
 
-nmap <Leader>rr :NERDTreeFocus<cr>R<c-w><c-p>
 
