@@ -26,7 +26,7 @@ set cursorline                          " Enable highlighting of the current lin
 set background=dark                     " tell vim what the background color looks like
 set showtabline=2                       " Always show tabs
 set noshowmode
-"set clipboard+=unnamed
+set clipboard+=unnamed
 set clipboard+=unnamedplus
 
 color desert

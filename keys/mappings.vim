@@ -47,14 +47,24 @@ nnoremap <C-l> <C-w>l
 
 " Open nerdTree with keyshortcut
 let mapleader = " "
-nmap <leader>e :NERDTree<cr>
+"nmap <leader>e :NERDTree<cr>
 nmap <Leader>rr :NERDTreeFocus<cr>R<c-w><c-p>
-nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <leader>ne :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 "nnoremap <C-f> :NERDTreeFind<CR>
+"
+"" Use preset argument to open it CocCommand 
+nnoremap <space>ed :CocCommand explorer --preset .vim<CR>
+nnoremap <space>ef :CocCommand explorer --preset floating<CR>
+nnoremap <space>ec :CocCommand explorer --preset cocConfig<CR>
+nnoremap <space>eb :CocCommand explorer --preset buffer<CR>
+:nnoremap <space>e :CocCommand explorer<CR>
 
-" TABS
+" List all presets
+nnoremap <space>el :CocList explPresets
+
+"TABS
 noremap <Tab> :tabnext<CR>
 noremap <S-Tab> :tabprevious<CR>
 nnoremap <silent><C-t> :tabnew<CR>                     "Tab: alterna para a proxima aba aberta
@@ -73,7 +83,7 @@ nmap th :split<CR>
 nmap tv :split<CR>
 
 "close splts and others
-nmap tt :q<CR> 
+nmap tt :q!<CR> 
 
 
 " No more Arrow keys, deal with it
@@ -118,6 +128,8 @@ nnoremap <leader>ev :vsplit ~/.config/nvim/init.vim<cr>
 nnoremap <leader>sv :source ~/.config/nvim/init.vim<cr>
 nnoremap <leader>cf :vsplit ~/.config/nvim/settings.vim<cr>
 nnoremap <leader>cr :source ~/.config/nvim/settings.vim<cr>
+nnoremap <leader>em :source ~/.config/nvim/keys/mappings.vim<cr>
+nnoremap <leader>sm :source ~/.config/nvim/keys/mappings.vim<cr>
 
 
 "Debugging keys
@@ -136,5 +148,4 @@ nmap <Leader>dj <Plug>VimspectorStepOver
 " Keys for completion
 inoremap <silent><expr> <C-Space> compe#complete()
 inoremap <silent><expr> <C-e>     compe#close('<C-e>')
-
 

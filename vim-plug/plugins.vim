@@ -49,7 +49,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'neovim/nvim-lspconfig'
     Plug 'hrsh7th/nvim-compe'
     "lug 'williamboman/nvim-lsp-installer'
-
+    
     "Airline vim
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
@@ -85,5 +85,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     "Plug 'zxqfl/tabnine-vim'
 
+    Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
 
 call plug#end()
