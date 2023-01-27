@@ -23,15 +23,20 @@ set laststatus=0                        " Always display the status line
 set number                              " Line numbers
 set relativenumber
 set cursorline                          " Enable highlighting of the current line
+set cursorcolumn
 set background=dark                     " tell vim what the background color looks like
 set showtabline=2                       " Always show tabs
 set noshowmode
 set clipboard+=unnamed
 set clipboard+=unnamedplus
+let g:airline_theme='violet'
+set scrolloff=8                         " Minimum number of lines to keep above and below the cursor
 
 color desert
-set cursorline
-hi CursorLine cterm=NONE ctermbg=8 ctermfg=NONE
+"hi CursorLine cterm=NONE ctermbg=8 ctermfg=NONE
+hi CursorLine term=bold cterm=bold guibg=Grey40
+highlight CursorLineNR ctermbg=red
+nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 
 let g:markdown_fenced_languages = [
       \ 'vim',

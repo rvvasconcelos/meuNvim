@@ -82,6 +82,13 @@ augroup highlight_yank
     au TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=700}
 augroup END
 
+
+augroup cursorline
+  au!
+  au ColorScheme * hi clear CursorLine
+               \ | hi link CursorLine CursorColumn
+augroup END
+
 " Coc Snippets """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:coc_global_extensions = [ 'coc-snippets','coc-explorer', ]

@@ -55,7 +55,7 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 "nnoremap <C-f> :NERDTreeFind<CR>
 "
 "" Use preset argument to open it CocCommand 
-nnoremap <space>ed :CocCommand explorer --preset .vim<CR>
+"nnoremap <space>ed :CocCommand explorer --preset .vim<CR>
 nnoremap <space>ef :CocCommand explorer --preset floating<CR>
 nnoremap <space>ec :CocCommand explorer --preset cocConfig<CR>
 nnoremap <space>eb :CocCommand explorer --preset buffer<CR>
@@ -128,8 +128,6 @@ nnoremap <leader>ev :vsplit ~/.config/nvim/init.vim<cr>
 nnoremap <leader>sv :source ~/.config/nvim/init.vim<cr>
 nnoremap <leader>cf :vsplit ~/.config/nvim/settings.vim<cr>
 nnoremap <leader>cr :source ~/.config/nvim/settings.vim<cr>
-nnoremap <leader>em :source ~/.config/nvim/keys/mappings.vim<cr>
-nnoremap <leader>sm :source ~/.config/nvim/keys/mappings.vim<cr>
 
 
 "Debugging keys
